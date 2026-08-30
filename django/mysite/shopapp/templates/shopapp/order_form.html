@@ -1,0 +1,16 @@
+{% extends "shopapp/base.html" %}
+
+{% block title %}
+Create order
+{% endblock title %}
+
+{% block body %}
+<h1>Create order</h1>
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">create order</button>
+    </form>
+</div>
+{% endblock body %}

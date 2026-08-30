@@ -1,0 +1,121 @@
+[{
+    "model": "shopapp.product",
+    "pk": 3,
+    "fields": {
+        "name": "Samsung",
+        "description": "normal",
+        "price": "14444.00",
+        "discount": 12,
+        "created_at": "2026-06-16T16:25:56.680Z",
+        "archived": true,
+        "prewiew": ""
+    }
+}, {
+    "model": "shopapp.product",
+    "pk": 4,
+    "fields": {
+        "name": "Liverpool",
+        "description": "greate",
+        "price": "3999.00",
+        "discount": 0,
+        "created_at": "2026-06-18T14:38:43.070Z",
+        "archived": false,
+        "prewiew": "products/product_4/prewiew/man1.jpg"
+    }
+}, {
+    "model": "shopapp.product",
+    "pk": 5,
+    "fields": {
+        "name": "NikPhone",
+        "description": "greate",
+        "price": "4000.55",
+        "discount": 0,
+        "created_at": "2026-06-18T14:43:50.365Z",
+        "archived": false,
+        "prewiew": ""
+    }
+}, {
+    "model": "shopapp.product",
+    "pk": 6,
+    "fields": {
+        "name": "Samsung new",
+        "description": "wqd",
+        "price": "2333.00",
+        "discount": 4,
+        "created_at": "2026-06-18T16:31:12.095Z",
+        "archived": false,
+        "prewiew": ""
+    }
+}, {
+    "model": "shopapp.product",
+    "pk": 7,
+    "fields": {
+        "name": "Tablet 344",
+        "description": "444",
+        "price": "4444.00",
+        "discount": 1,
+        "created_at": "2026-06-18T16:35:49.847Z",
+        "archived": false,
+        "prewiew": ""
+    }
+}, {
+    "model": "shopapp.product",
+    "pk": 8,
+    "fields": {
+        "name": "Laptop777",
+        "description": "2qee",
+        "price": "1234.00",
+        "discount": 0,
+        "created_at": "2026-06-20T19:29:36.908Z",
+        "archived": false,
+        "prewiew": "products/product_8/prewiew/man1.jpg"
+    }
+}, {
+    "model": "shopapp.product",
+    "pk": 10,
+    "fields": {
+        "name": "Trop",
+        "description": "adq",
+        "price": "2324.00",
+        "discount": 0,
+        "created_at": "2026-06-28T10:04:51.514Z",
+        "archived": false,
+        "prewiew": "products/product_None/prewiew/man2.jpg"
+    }
+}, {
+    "model": "shopapp.product",
+    "pk": 11,
+    "fields": {
+        "name": "Smartphone1",
+        "description": "",
+        "price": "199.00",
+        "discount": 10,
+        "created_at": "2026-08-19T13:25:51.893Z",
+        "archived": false,
+        "prewiew": ""
+    }
+}, {
+    "model": "shopapp.product",
+    "pk": 12,
+    "fields": {
+        "name": "Smartphone2",
+        "description": "",
+        "price": "1199.00",
+        "discount": 10,
+        "created_at": "2026-08-19T13:25:51.893Z",
+        "archived": false,
+        "prewiew": ""
+    }
+}, {
+    "model": "shopapp.product",
+    "pk": 13,
+    "fields": {
+        "name": "Smartphone3",
+        "description": "",
+        "price": "499.00",
+        "discount": 10,
+        "created_at": "2026-08-19T13:25:51.893Z",
+        "archived": false,
+        "prewiew": ""
+    }
+}]

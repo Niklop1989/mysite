@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title%}
+        Base title
+        {% endblock title%}
+
+    </title>
+</head>
+
+<body>
+    {% block body%}
+    Base body
+    {% endblock body%}
+
+    <div>
+        {% now "H:i" %}
+    </div>
+    <div>
+        {% now "l" as current_weekday %}
+        today is {{ current_weekday }}
+    </div>
+</body>
+
+</html>

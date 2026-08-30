@@ -1,0 +1,25 @@
+{% extends 'myauth/base.html' %}
+
+{% block title %}
+Profile details
+{% endblock %}
+
+{% block body %}
+<div>
+    {% if user.is_authenticated %}
+    <h2>Name: {{ user.username }}</h2>
+    <div>Lastname: {{ user.last_name }}</div>
+    <div>Bio: {{ user.profile.bio }}</div>
+    <div>Email: {{ user.email }}</div>
+
+    <div>
+        {% if user.pk == request.user.pk %}
+        <a href="{% url 'myauth:avatar_update' pk=user.pk %}">
+            Update avatar
+        </a>
+        {% endif %}
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %}

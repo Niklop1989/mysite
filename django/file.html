@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СпортМаг - Магазин спортивных товаров</title>
+    <!-- Подключение Tailwind CSS через CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#1E40AF',
+                            dark: '#1F2937',
+                            light: '#F3F4F6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-900 antialiased">
+
+    <!-- Верхняя панель (Header) -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Логотип -->
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-brand-blue tracking-wider">Спорт<span
+                            class="text-brand-dark">МАГ</span></span>
+                </div>
+
+                <!-- Навигация (десктоп) -->
+                <nav class="hidden md:flex space-x-8 font-medium">
+                    <a href="#" class="text-brand-blue border-b-2 border-brand-blue pb-2">Главная</a>
+                    <a href="#" class="text-gray-500 hover:text-brand-blue transition">Товары</a>
+                    <a href="#" class="text-gray-500 hover:text-brand-blue transition">Категории</a>
+                    <a href="#" class="text-gray-500 hover:text-brand-blue transition">О нас</a>
+                    <a href="#" class="text-gray-500 hover:text-brand-blue transition">Контакты</a>
+                </nav>
+
+                <!-- Иконки действий -->
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 text-gray-500 hover:text-brand-blue transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                    <button class="p-2 text-gray-500 hover:text-brand-blue transition relative">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                        </svg>
+                        <span
+                            class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">2</span>
+                    </button>
+                    <button class="p-2 text-gray-500 hover:text-brand-blue transition md:hidden">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главный баннер (Hero Section) -->
+    <section class="relative bg-brand-dark py-24 sm:py-32 overflow-hidden text-white text-center">
+        <!-- Фоновое изображение (затемненное) -->
+        <div class="absolute inset-0 opacity-40 bg-cover bg-center"
+            style="background-image: url('https://unsplash.com');"></div>
+
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-4">СИЛА В ДВИЖЕНИИ</h1>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8">Откройте для себя новую коллекцию спортивной одежды и
+                оборудования для максимальных результатов.</p>
+            <a href="#"
+                class="inline-block bg-brand-blue hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-md shadow-lg transition transform hover:-translate-y-1 duration-200">Перейти
+                в каталог</a>
+        </div>
+    </section>
+
+    <!-- Категории товаров -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center md:text-left">Популярные категории</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Категория 1 -->
+            <div class="relative group h-64 rounded-lg overflow-hidden shadow-md">
+                <img src="https://unsplash.com"
+                    class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
+                    alt="Одежда">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div class="absolute bottom-6 left-6">
+                    <h3 class="text-2xl font-bold text-white">Одежда и обувь</h3>
+                    <a href="#" class="text-sm text-gray-200 hover:text-white flex items-center mt-2">Смотреть товары
+                        <span class="ml-2">→</span></a>
+                </div>
+            </div>
+            <!-- Категория 2 -->
+            <div class="relative group h-64 rounded-lg overflow-hidden shadow-md">
+                <img src="https://unsplash.com"
+                    class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
+                    alt="Инвентарь">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div class="absolute bottom-6 left-6">
+                    <h3 class="text-2xl font-bold text-white">Фитнес и тренажеры</h3>
+                    <a href="#" class="text-sm text-gray-200 hover:text-white flex items-center mt-2">Смотреть товары
+                        <span class="ml-2">→</span></a>
+                </div>
+            </div>
+            <!-- Категория 3 -->
+            <div class="relative group h-64 rounded-lg overflow-hidden shadow-md">
+                <img src="https://unsplash.com"
+                    class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
+                    alt="Аксессуары">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div class="absolute bottom-6 left-6">
+                    <h3 class="text-2xl font-bold text-white">Туризм и отдых</h3>
+                    <a href="#" class="text-sm text-gray-200 hover:text-white flex items-center mt-2">Смотреть товары
+                        <span class="ml-2">→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Новинки товаров (Product Grid) -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center md:text-left">Новые поступления</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Товар 1 -->
+                <div
+                    class="group border border-gray-200 rounded-lg p-4 flex flex-col h-full hover:shadow-lg transition">
+                    <div class="h-64 overflow-hidden mb-4 relative flex items-center justify-center">
+                        <span class="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded">New</span>
+                        <img src="https://unsplash.com" alt="Кроссовки"
+                            class="max-h-full max-w-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <h3 class="text-gray-700 font-medium text-sm mb-1">Беговые кроссовки Nike Air</h3>
+                    <div class="flex items-center mb-2">
+                        <!-- Звезды рейтинга -->
+                        <div class="text-yellow-400 flex text-sm">★ ★ ★ ★ ★</div>
+                    </div>
+                    <div class="mt-auto flex justify-between items-center">
+                        <span class="text-lg font-bold text-brand-dark">$129.99</span>
+                        <button class="bg-brand-blue text-white p-2 rounded-md hover:bg-blue-700 transition"
+                            title="В корзину">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4v16m8-8H4"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Товар 2 -->
+                <div
+                    class="group border border-gray-200 rounded-lg p-4 flex flex-col h-full hover:shadow-lg transition">
+                    <div class="h-64 overflow-hidden mb-4 flex items-center justify-center">
+                        <img src="https://unsplash.com" alt="Спортивный костюм"
+                            class="max-h-full max-w-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <h3 class="text-gray-700 font-medium text-sm mb-1">Спортивный костюм Performance</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="text-yellow-400 flex text-sm">★ ★ ★ ★ ☆</div>
+                    </div>
+                    <div class="mt-auto flex justify-between items-center">
+                        <span class="text-lg font-bold text-brand-dark">$89.50</span>

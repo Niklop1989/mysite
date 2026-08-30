@@ -1,0 +1,21 @@
+{% extends 'shopapp/base.html' %} {% load cache %} {% block title %} block title
+{% endblock title %} {% block body %}
+<h1>hello shop index</h1>
+<div>
+  <ul>
+    {%for name,price in products%}
+    <li>{{name}} for {{price}}$</li>
+
+    {%empty%} no products {%endfor%}
+  </ul>
+</div>
+
+<div>
+  <strong> you have {{items}} charr{{items|pluralize:"y,ies"}} </strong>
+</div>
+
+<div>time running: {{time_running}}</div>
+
+{% cache 10 lorem_name %}
+<div>{%lorem 3 p random%}</div>
+{% endcache %} {% endblock body %}

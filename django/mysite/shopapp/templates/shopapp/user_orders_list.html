@@ -1,0 +1,27 @@
+{% extends 'shopapp/base.html' %}
+{% load cache %}
+
+{% block body %}
+{% if user %}
+<h1>
+    Пользователь {{ user.username }}
+    {% if object_list %}
+    выполнил следующие заказы:
+    {% else %}
+    ещё не выполнил ни одного заказа.
+    {% endif %}
+</h1>
+{% endif %}
+
+{% if object_list %}
+<ul>
+    {% cache 100 lorem %}
+    {% for order in object_list %}
+    <li>
+        Заказ #{{ order.pk }} от {{ order.created_at|date:"d M Y" }}
+    </li>
+    {% endfor %}
+    {% endcache %}
+</ul>
+{% endif %}
+{% endblock %}

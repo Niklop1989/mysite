@@ -1,0 +1,43 @@
+{% extends "shopapp/base.html" %}
+{% block title %}
+Create order
+{% endblock title %}
+
+{% block body %}
+<div>
+    <form method="post">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit">create</button>
+    </form>
+    <div>
+        <a href="{% url 'shopapp:orders_list_url' %}">
+            orders list
+        </a>
+    </div>
+</div>
+{% if request.POST %}
+<div>
+
+    <div>
+        <h2>Previous form data</h2>
+        <table>
+            <tr>
+                <td>delivery_address: {{request.POST.delivery_address}}</td>
+            </tr>
+            <tr>
+                <td>Price: {{request.POST.price}}</td>
+            </tr>
+            <tr>
+                <td>Description: {{request.POST.description|linebreaks}}</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <a href="{% url 'shopapp:orders_list_url' %}">
+            orders list
+        </a>
+    </div>
+
+    {% endif %}
+    {% endblock body %}

@@ -1,0 +1,70 @@
+2026-08-26 18:07:33,929 [ERROR] django.request Internal Server Error: /ru/shop/users/1/orders/
+Traceback (most recent call last):
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/base.py", line 577, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/engine.py", line 186, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 307, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 235, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/base.py", line 579, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nikita/Skillbox2026/.venv/lib/python3.12/site-packages/django/template/base.py", line 634, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Template: /home/nikita/Skillbox2026/django/mysite/shopapp/templates/shopapp/user_orders_list.html, Invalid block tag on line 7: 'endif', expected 'endblock'. Did you forget to register or load this tag?
